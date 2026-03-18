@@ -109,7 +109,21 @@ orderBtn.addEventListener("click", () => {
     orderCount++;
     console.log("عدد الطلبات الآن:", orderCount);
 });
+const designs = [
+  "images/carpet1.jpg",
+  "images/carpet2.jpg",
+  "images/carpet3.jpg",
+  "images/carpet4.jpg"
+];
 
+const galleryGrid = document.querySelector("#gallery .grid");
+
+designs.forEach(src => {
+  let img = document.createElement("img");
+  img.src = src;
+  img.alt = "تصميم سجادة عصري";
+  galleryGrid.appendChild(img);
+});
 /* ============================== */
 /* 10️⃣ التعامل مع الوقت */
 const now = new Date();
