@@ -1,0 +1,202 @@
+/* ============================ */
+/* 1️⃣ Reset & Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ============================ */
+/* 2️⃣ Text Styling */
+h1, h2, h3 {
+    font-weight: 800;
+    color: #0f2027;
+    margin-bottom: 15px;
+}
+p, li, label {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+}
+a:hover { color: #2980b9; }
+
+/* ============================ */
+/* 3️⃣ Header */
+header.header {
+    background: linear-gradient(135deg, #0f2027, #2c5364);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+header.header h1 { font-size: 2.5rem; }
+header.header p { opacity: 0.9; font-size: 1.1rem; }
+
+/* ============================ */
+/* 4️⃣ Navbar & Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #111;
+}
+.navbar a {
+    color: white;
+    padding: 15px 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+/* ============================ */
+/* 5️⃣ Section & Cards */
+.section.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.section.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ============================ */
+/* 6️⃣ Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.grid-item {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+.grid-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s, filter 0.5s;
+}
+.grid-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* ============================ */
+/* 7️⃣ Flexbox Utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================ */
+/* 8️⃣ Forms */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.5);
+    outline: none;
+}
+button {
+    background: #3498db;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+/* ============================ */
+/* 9️⃣ Transitions & Animation */
+.fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+@keyframes fadeIn { to { opacity: 1; } }
+
+.slide-up { transform: translateY(20px); opacity: 0; animation: slideUp 0.8s forwards; }
+@keyframes slideUp { to { transform: translateY(0); opacity: 1; } }
+
+.hover-rotate:hover { transform: rotate(3deg) scale(1.05); }
+
+/* ============================ */
+/* 10️⃣ Box Shadow & Glow */
+.shadow-hover:hover { box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+.glow { box-shadow: 0 0 15px rgba(52,152,219,0.5); }
+
+/* ============================ */
+/* 11️⃣ Cursor */
+a, button { cursor: pointer; }
+.drag-cursor { cursor: grab; }
+.dragging { cursor: grabbing; }
+
+/* ============================ */
+/* 12️⃣ Advanced Selectors */
+.card:nth-child(even) { background: #f9f9f9; }
+.card:hover > h2 { color: #3498db; }
+ul.features-list > li::before {
+    content: "✔";
+    color: #27ae60;
+    margin-right: 8px;
+}
+
+/* ============================ */
+/* 13️⃣ Media Queries */
+@media (max-width:768px) {
+    .navbar { flex-direction: column; }
+    .flex-space-between { flex-direction: column; gap: 10px; }
+}
+
+/* ============================ */
+/* 14️⃣ Extra Effects */
+.blur-bg { backdrop-filter: blur(5px); }
+.text-gradient {
+    background: linear-gradient(90deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================ */
+/* 15️⃣ Footer */
+footer.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
